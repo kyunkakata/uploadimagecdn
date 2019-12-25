@@ -77,7 +77,7 @@ import com.android.build.OutputFile
 
 project.ext.react = [
     entryFile: "index.js",
-    enableHermes: false,  // clean and rebuild if changing
+    enableHermes: true,  // clean and rebuild if changing
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -117,7 +117,7 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  * on project.ext.react, JavaScript will not be compiled to Hermes Bytecode
  * and the benefits of using Hermes will therefore be sharply reduced.
  */
-def enableHermes = project.ext.react.get("enableHermes", false);
+def enableHermes = project.ext.react.get("enableHermes", true);
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -130,9 +130,10 @@ android {
     defaultConfig {
         applicationId "com.uploadimagecnd"
         minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
     }
     splits {
         abi {
@@ -188,6 +189,11 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-code-push')
+    implementation project(':appcenter-analytics')
+    implementation project(':appcenter-crashes')
+    implementation project(':appcenter')
+    implementation project(':react-native-vector-icons')
     implementation project(':react-native-image-crop-picker')
     implementation project(':react-native-action-sheet')
     implementation fileTree(dir: "libs", include: ["*.jar"])

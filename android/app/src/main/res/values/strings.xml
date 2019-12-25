@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">UploadImageCnd</string>
+    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
+    <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
+    
+    <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">rQ1vkUyEpsd8dwRDjvks6PzIUK31wwB3c1gJ6</string>
 </resources>
