@@ -8,13 +8,13 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "appcenter": "2.6.1",
-    "appcenter-analytics": "2.6.1",
-    "appcenter-crashes": "2.6.1",
+    "appcenter": "4.4.5",
+    "appcenter-analytics": "4.4.5",
+    "appcenter-crashes": "4.4.5",
     "react": "16.8.6",
     "react-native": "0.60.3",
     "react-native-action-sheet": "^2.2.0",
-    "react-native-code-push": "^6.0.0",
+    "react-native-code-push": "^7.0.5",
     "react-native-image-crop-picker": "^0.26.1",
     "react-native-paper": "^3.4.0",
     "react-native-vector-icons": "^6.6.0"
